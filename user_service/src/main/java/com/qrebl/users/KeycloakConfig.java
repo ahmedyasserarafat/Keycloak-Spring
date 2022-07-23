@@ -8,12 +8,12 @@ import org.keycloak.admin.client.KeycloakBuilder;
 public class KeycloakConfig {
 
     static Keycloak keycloak = null;
-    final static String serverUrl = "YOUR_SERVER_URL";
-    public final static String realm = "YOUR_REALM_NAME";
-    final static String clientId = "YOUR_CLIENT_ID";
-    final static String clientSecret = "YOUR_CLIENT_SECRET_KEY";
-    final static String userName = "YOUR_REALM_ADMIN_USERNAME";
-    final static String password = "Your_REALM_ADMIN_PASSWORD";
+    final static String serverUrl = "http://localhost:8080/";
+    public final static String realm = "sample";
+    final static String clientId = "admin-cli";
+    final static String clientSecret = "qR87p8sO2hv17N0TNECyuhOeh1OiPZwU";
+    final static String userName = "admin";
+    final static String password = "admin";
 
 
     public KeycloakConfig() {
@@ -29,7 +29,7 @@ public class KeycloakConfig {
                     .username(userName)
                     .password(password)
                     .clientId(clientId)
-                    .clientSecret(clientSecret)
+                    //.clientSecret(clientSecret)
                     .resteasyClient(new ResteasyClientBuilder()
                             .connectionPoolSize(10)
                             .build()
